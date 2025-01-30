@@ -1,0 +1,2 @@
+Replicate,Age Stage,Chrom,Inversion,Amplicon Name,Start,End,Library ID#,DNA Tube #,Sequencing Name,UDI#,i5,i7 RC,Sample Size,Concentration (nmol/L),Paired Read File 1,Paired Read File 2
+251,Embryo,3R,K,3RK_0_CG17360,7609417,7609723,120,3.dil,251emb3R,125, AGTGCCGATG,ACAACACACA,5508,23.4,251emb3R_S99_L002_R1_001.fastq.gz,251emb3R_S99_L002_R2_001.fastq.gz

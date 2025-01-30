@@ -1,0 +1,8 @@
+adaptor A: AATGATACGGCGACCACCGAGATCTACAC[i5]TCGTCGGCAGCGTC
+adaptor B: CAAGCAGAAGACGGCATACGAGAT[i7]GTCTCGTGGGCTCGG
+primer len: 20
+gap min: 100
+gap max: 220
+inv buffer: 2000
+masking tolerance: 1
+primer region buffer: 3

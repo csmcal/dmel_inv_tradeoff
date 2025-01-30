@@ -1,0 +1,13 @@
+stubby adaptor forward: ACACTCTTTCCCTACACGACGCTCTTCCGATCT
+stubby adaptor reverse: AGACGTGTGCTCTTCCGATCT
+primer len: 19
+gap min: 100
+gap max: 250
+inv buffer: 100
+masking tolerance: 1
+primer region buffer: 3
+number of filtered amps to generate primers from: 20
+index adaptor A: AATGATACGGCGACCACCGAGATCTACAC[i5]TCGTCGGCAGCGTC
+index adaptor B: CAAGCAGAAGACGGCATACGAGAT[i7]GTCTCGTGGGCTCGG
+index adaptor A full: AATGATACGGCGACCACCGAGATCTACAC[i5]ACACTCTTTCCCTACACGACGCTCTTCCGATC*T
+index adaptor B full: CAAGCAGAAGACGGCATACGAGAT[i7]GTGACTGGAGTTCAGACGTGTGCTCTTCCGAT*C

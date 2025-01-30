@@ -1,0 +1,16 @@
+Counting the proportion of calls of In(2R)NS as TA (Inv), CG (Std), TG (Recombinant), CA (Recombinant), and Other at fixed difference bases in reads from test_aligned/192par2R_aln.bam
+
+
+Fixed differences expected: Offset in amp; Offset in genome; Base distribution in inv ref; Base distribution in std ref; Base(s) in inv ref; Base(s) in std ref
+208	11352222	[0, 24, 0, 0, 0]	[0, 0, 0, 169, 0]	T	C
+247	11352261	[24, 0, 0, 0, 0]	[0, 0, 169, 0, 0]	A	G
+removed 6166 unpaired, and 1 secondary alignments in library test_aligned/192par2R_aln.bam
+
+
+Base Identity		Proportion		Count
+TA (Inv)		0.17904129335985255	19624
+CG (Std)		0.5636643979344197	61781
+TG (Recombinant)	0.12298596792146416	13480
+CA (Recombinant)	0.13314964509242194	14594
+Other			0.0011586956918416874	127
+

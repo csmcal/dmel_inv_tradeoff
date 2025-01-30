@@ -1,0 +1,262 @@
+########################################################################################
+#                                                                                      #
+#                                 Primer Dimer Report                                  #
+#                                                                                      #
+########################################################################################
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.r1.adapter vs seq2L.Tengl2.r1.adapter: -14.04 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTGGACAGCATACATCCGAATCG >3'
+                                             ||| |||                                   
+                                         3'< GCTAAGCCTACATACGACAGGTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.f2.adapter vs seq2L.Tengl2.f2.adapter: -8.03 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTCCTCGGTTGAAGCCCTGG >3'
+                                                        || ||                                              
+                                                    3'< GGTCCCGAAGTTGGCTCCTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.f2.adapter vs seq2L.Tengl2.f2.adapter: -8.03 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTCCTCGGTTGAAGCCCTGG >3'
+                                                        || ||                                              
+                                                    3'< GGTCCCGAAGTTGGCTCCTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.f2.adapter vs seq3L.CG9004.f2.adapter: -16.01 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGGTGCTCTGCTACATGTACC >3'
+                                                    | |||||||| |                                          
+                                                3'< CCATGTACATCGTCTCGTGGTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.f2.adapter vs seq2L.Tengl2.f2.adapter: -8.03 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTCCTCGGTTGAAGCCCTGG >3'
+                                                        || ||                                              
+                                                    3'< GGTCCCGAAGTTGGCTCCTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3R.CG17360.f1.adapter vs seq3R.CG17360.f1.adapter: -15.23 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTCCCCAATGCCAAGTTCGAA >3'
+                                                         ||||||                                               
+                                                     3'< AAGCTTGAACCGTAACCCCTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.f2.adapter vs seq3R.CG17360.r2.adapter: -12.69 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTCCTCGGTTGAAGCCCTGG >3'
+                                                  |||||   |||                          
+                                           3'< TTCACTTCAAAACCGGCGGTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.r1.adapter vs seq2L.Tengl2.r1.adapter: -14.04 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTGGACAGCATACATCCGAATCG >3'
+                                             ||| |||                                   
+                                         3'< GCTAAGCCTACATACGACAGGTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.r1.adapter vs seq2L.Tengl2.r1.adapter: -14.04 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTGGACAGCATACATCCGAATCG >3'
+                                             ||| |||                                   
+                                         3'< GCTAAGCCTACATACGACAGGTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.f2.adapter vs seq3L.CG9004.f2.adapter: -16.01 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGGTGCTCTGCTACATGTACC >3'
+                                                    | |||||||| |                                          
+                                                3'< CCATGTACATCGTCTCGTGGTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.r1.adapter vs seq2L.Tengl2.r1.adapter: -14.04 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTGGACAGCATACATCCGAATCG >3'
+                                             ||| |||                                   
+                                         3'< GCTAAGCCTACATACGACAGGTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3R.CG17360.f1.adapter vs seq3R.CG17360.f1.adapter: -15.23 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTCCCCAATGCCAAGTTCGAA >3'
+                                                         ||||||                                               
+                                                     3'< AAGCTTGAACCGTAACCCCTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2L.Tengl2.r1.adapter vs seq2L.Tengl2.r1.adapter: -14.04 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTGGACAGCATACATCCGAATCG >3'
+                                             ||| |||                                   
+                                         3'< GCTAAGCCTACATACGACAGGTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2R.Stacl.f2.adapter vs seq2R.Stacl.r2.adapter: -10.68 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGAAATCCCTGAGCCTGGAC >3'
+                                     ||||   |||     |      |  |                
+                                 3'< GCTATTGCTTGGACTAAGGCCTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.f2.adapter vs seq3L.CG9004.f2.adapter: -16.01 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGGTGCTCTGCTACATGTACC >3'
+                                                    | |||||||| |                                          
+                                                3'< CCATGTACATCGTCTCGTGGTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.r2.adapter vs seq3L.CG9004.r2.adapter: -2.42 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTCCGCCAACTCGGGATCATAC >3'
+              || || ||    | |  | |  | |    || || ||    
+          3'< CATACTAGGGCTCAACCGCCTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3R.CG17360.f1.adapter vs seq3R.CG17360.f1.adapter: -15.23 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTCCCCAATGCCAAGTTCGAA >3'
+                                                         ||||||                                               
+                                                     3'< AAGCTTGAACCGTAACCCCTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2R.Stacl.f2.adapter vs seq3R.CG17360.r2.adapter: 0.0 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGAAATCCCTGAGCCTGGAC >3'
+            | |       |   || |               |  || 
+       3'< TTCACTTCAAAACCGGCGGTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.f2.adapter vs seq3L.CG9004.f2.adapter: -16.01 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGGTGCTCTGCTACATGTACC >3'
+                                                    | |||||||| |                                          
+                                                3'< CCATGTACATCGTCTCGTGGTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2R.Stacl.r2.adapter vs seq2R.Stacl.r2.adapter: -7.44 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTCCGGAATCAGGTTCGTTATCG >3'
+                                                  ||                                        
+                                              3'< GCTATTGCTTGGACTAAGGCCTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3R.CG17360.f1.adapter vs seq3R.CG17360.f1.adapter: -15.23 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTCCCCAATGCCAAGTTCGAA >3'
+                                                         ||||||                                               
+                                                     3'< AAGCTTGAACCGTAACCCCTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq2R.Stacl.r2.adapter vs seq2R.Stacl.r2.adapter: -7.44 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTCCGGAATCAGGTTCGTTATCG >3'
+                                                  ||                                        
+                                              3'< GCTATTGCTTGGACTAAGGCCTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.f2.adapter vs seq3L.CG9004.f2.adapter: -16.01 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGGTGCTCTGCTACATGTACC >3'
+                                                    | |||||||| |                                          
+                                                3'< CCATGTACATCGTCTCGTGGTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.f2.adapter vs seq3L.CG9004.f2.adapter: -16.01 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGGTGCTCTGCTACATGTACC >3'
+                                                    | |||||||| |                                          
+                                                3'< CCATGTACATCGTCTCGTGGTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.f2.adapter vs seq3L.CG9004.f2.adapter: -16.01 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTGGTGCTCTGCTACATGTACC >3'
+                                                    | |||||||| |                                          
+                                                3'< CCATGTACATCGTCTCGTGGTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3R.CG17360.f1.adapter vs seq3R.CG17360.f1.adapter: -15.23 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTCCCCAATGCCAAGTTCGAA >3'
+                                                         ||||||                                               
+                                                     3'< AAGCTTGAACCGTAACCCCTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3L.CG9004.r2.adapter vs seq3L.CG9004.r2.adapter: -2.42 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> AGACGTGTGCTCTTCCGATCTCCGCCAACTCGGGATCATAC >3'
+              || || ||    | |  | |  | |    || || ||    
+          3'< CATACTAGGGCTCAACCGCCTCTAGCCTTCTCGTGTGCAGA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+       seq3R.CG17360.f1.adapter vs seq3R.CG17360.f1.adapter: -15.23 kcal/mol
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      5'> ACACTCTTTCCCTACACGACGCTCTTCCGATCTTCCCCAATGCCAAGTTCGAA >3'
+                                                         ||||||                                               
+                                                     3'< AAGCTTGAACCGTAACCCCTTCTAGCCTTCTCGCAGCACATCCCTTTCTCACA <5'
+>>> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  <<<
+
+****************************************************************************************
+########################################################################################
+#                                                                                      #
+#                                    End of Report                                     #
+#                                                                                      #
+########################################################################################

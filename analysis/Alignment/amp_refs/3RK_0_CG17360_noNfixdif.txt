@@ -1,0 +1,2 @@
+Offset	Genomic Position	Inv Dist	Std Dist	Inv Base	Std Base
+158	7609575	[0, 34, 0, 0, 0]	[159, 0, 0, 0, 0]	T	A
