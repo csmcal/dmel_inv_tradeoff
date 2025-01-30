@@ -1,0 +1,38 @@
+*.pyc
+*.png
+*.svg
+*.gif
+*.pickle
+*.Rdata
+*.Rhistory
+Reference/
+Papers/
+__pycache__/
+*__pycache__/
+*home/
+*backups/
+*scratch/
+*Old\ Plots
+*.DS_Store
+*.log
+*nohup.out
+*DAGs/*
+*.dag
+*backups/
+*test/
+Amplicon\ Design/Primers/primer3/*
+Amplicon\ Design/Primers/Reference/
+Amplicon\ Design/Primers/Scripting\ Backups/
+Amplicon\ Design/Primers/Strains/*
+Fly\ Collection\ Data/
+Library\ Preparation/
+Depth\ Bootstrapping/
+Analysis/dmel_ref/*
+Analysis/Alignment/bootstrap/*
+Analysis/Alignment/fastp/*
+Analysis/Alignment/inv_freqs/back/
+Analysis/Alignment/test_aligned/*
+Analysis/Alignment/test_reads/*
+Analysis/dmel_ref/*
+Analysis/Raw\ Read\ Data/*
+Analysis/Significance/output/*
