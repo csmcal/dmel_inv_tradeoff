@@ -20,11 +20,14 @@ __pycache__/
 *.dag
 *backups/
 *test/
+*Untitled*
 Amplicon\ Design/Primers/primer3/*
+Amplicon\ Design/Primers/primer3
 Amplicon\ Design/Primers/Reference/
 Amplicon\ Design/Primers/Scripting\ Backups/
 Amplicon\ Design/Primers/Strains/*
 amplicon_design/Primers/primer3/*
+amplicon_design/Primers/primer3
 amplicon_design/Primers/Reference/
 amplicon_design/Primers/Scripting\ Backups/
 amplicon_design/Primers/Strains/*
@@ -32,6 +35,9 @@ amplicon_design/Strains/*
 amplicon_design/Primers/test_chroms/
 amplicon_design/Primers/test_out/
 amplicon_design/Primers/test_out_haps/
+amplicon_design/Primers/current_out_5_24_19
+amplicon_design/Primers/hap_test
+amplicon_design/Primers/primer_output/*
 Fly\ Collection\ Data/
 fly_collection_data/
 library_preparation/
@@ -39,9 +45,12 @@ Library\ Preparation/
 Analysis/dmel_ref/*
 Analysis/Alignment/bootstrap/*
 Analysis/Alignment/fastp/*
+analysis/Alignment/fastp
 Analysis/Alignment/inv_freqs/back/
 Analysis/Alignment/test_aligned/*
 Analysis/Alignment/test_reads/*
 Analysis/dmel_ref/*
 Analysis/Raw\ Read\ Data/*
 Analysis/Significance/output/*
+seq_depth_estimation/bootstrap_freq_2.csv
+analysis/Graphing/karyotype_freq_graphing.html
