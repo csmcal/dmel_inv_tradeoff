@@ -24,9 +24,18 @@ Amplicon\ Design/Primers/primer3/*
 Amplicon\ Design/Primers/Reference/
 Amplicon\ Design/Primers/Scripting\ Backups/
 Amplicon\ Design/Primers/Strains/*
+amplicon_design/Primers/primer3/*
+amplicon_design/Primers/Reference/
+amplicon_design/Primers/Scripting\ Backups/
+amplicon_design/Primers/Strains/*
+amplicon_design/Strains/*
+amplicon_design/Primers/test_chroms/
+amplicon_design/Primers/test_out/
+amplicon_design/Primers/test_out_haps/
 Fly\ Collection\ Data/
+fly_collection_data/
+library_preparation/
 Library\ Preparation/
-Depth\ Bootstrapping/
 Analysis/dmel_ref/*
 Analysis/Alignment/bootstrap/*
 Analysis/Alignment/fastp/*
