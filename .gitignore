@@ -14,6 +14,7 @@ __pycache__/
 *scratch/
 *Old\ Plots
 *.DS_Store
+*DS_Store*
 *.log
 *nohup.out
 *DAGs/*
@@ -53,4 +54,6 @@ Analysis/dmel_ref/*
 Analysis/Raw\ Read\ Data/*
 Analysis/Significance/output/*
 seq_depth_estimation/bootstrap_freq_2.csv
+seq_depth_estimation/*.csv
 analysis/Graphing/karyotype_freq_graphing.html
+analysis/Alignment/
