@@ -752,12 +752,13 @@ def main():
 			if aligned_output_directory[-1] != '/':
 				aligned_output_directory += '/'
 
-	if perform_freq_calc:
+	if perform_freq_calc or perform_read_pair_count:
 		assert (os.path.exists(amplicon_ref_seq_directory)),'Amplicon reference sequence directory (--amp_ref_d) {} \
 			does not reference a directory'.format(amplicon_ref_seq_directory)
 		if amplicon_ref_seq_directory[-1] != '/':
 			amplicon_ref_seq_directory += '/'
 
+	if perform_freq_calc:
 		assert (output_directory!=''),'Estimated inversion frequency and read counts output \
 			directory (--od) not given'
 		if not os.path.exists(output_directory):
@@ -782,12 +783,12 @@ def main():
 		# 	read_directory,alignment_intermediates_directory,aligned_output_directory,
 		# 	picard_directory,GATK_directory)
 
-	# read_hap_sets = []
 	if perform_read_pair_count:
 		# Import the asynchronous extraction method from extrct_read_haps
 		from extract_read_haps import extract_and_write_async_pool
 
-		read_amp_hap_sets = extract_and_write_async_pool(read_metadata,aligned_output_directory,hap_output_directory)
+		read_amp_hap_sets = extract_and_write_async_pool(read_metadata,
+			aligned_output_directory,hap_output_directory,amplicon_ref_seq_directory)
 		# read_hap_sets = extract_read_haps(read_metadata,aligned_output_directory)
 		# write_sep_read_hap_files(read_hap_sets,read_metadata,output_directory)
 

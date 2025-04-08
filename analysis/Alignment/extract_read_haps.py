@@ -79,19 +79,70 @@ def read_pair_generator(bam, contig, start, end):
 
 # Iterator/generator for caching reads from a BAM while waiting for the paired read in paired-end read sets,
 #   throws out secondary alignments and reads without pairs
-def read_pair_generator_tally(bam, contig, start, end, pool_name):
+def read_pair_generator_tally(bam, contig, start, end, pool_name, snp_positions=None):
 	num_unpaired = 0
 	num_secondary = 0
+	num_low_qual = 0
+	num_low_mapq = 0
+	num_low_snp_qual = 0
 	read_dict = defaultdict(lambda: [None, None])
+	
 	for read in bam.fetch():
-		# Count and throw out unpaired and secondary alignments - 'supplementary' is unclear in the docs
+		# Count and throw out unpaired and secondary alignments
 		if not read.is_proper_pair:
 			num_unpaired += 1
 			continue
 		if read.is_secondary or read.is_supplementary:
 			num_secondary += 1
 			continue
-		# Reads are added to read_dict until a pair is found.
+			
+		# Filter reads with mapping quality <= 20
+		if read.mapping_quality <= 20:
+			num_low_mapq += 1
+			continue
+			
+		# Check base quality at SNP positions if provided
+		if snp_positions is not None:
+			qualities = read.query_qualities
+			positions = read.get_aligned_pairs()
+			if qualities is not None and positions is not None:
+				low_quality_snp = False
+				for pos in snp_positions:
+					# Find the read position that maps to this reference position
+					for read_pos, ref_pos in positions:
+						if ref_pos == pos and read_pos is not None:
+							if qualities[read_pos] <= 20:
+								low_quality_snp = True
+								break
+					if low_quality_snp:
+						break
+				if low_quality_snp:
+					num_low_snp_qual += 1
+					continue
+		
+		# Trim bases with quality < 20 from both ends
+		qualities = read.query_qualities
+		if qualities is not None:
+			# Find first position with quality >= 20
+			start_trim = 0
+			while start_trim < len(qualities) and qualities[start_trim] < 20:
+				start_trim += 1
+				
+			# Find last position with quality >= 20
+			end_trim = len(qualities) - 1
+			while end_trim >= 0 and qualities[end_trim] < 20:
+				end_trim -= 1
+				
+			# If entire read is low quality, skip it
+			if start_trim > end_trim:
+				num_low_qual += 1
+				continue
+				
+			# Trim the read sequence and qualities
+			read.query_sequence = read.query_sequence[start_trim:end_trim+1]
+			read.query_qualities = qualities[start_trim:end_trim+1]
+		
+		# Reads are added to read_dict until a pair is found
 		qname = read.query_name
 		if qname not in read_dict:
 			if read.is_read1:
@@ -104,13 +155,16 @@ def read_pair_generator_tally(bam, contig, start, end, pool_name):
 			else:
 				yield read_dict[qname][0], read
 			del read_dict[qname]
-	print("removed "+str(num_unpaired)+" unpaired, and "+str(num_secondary)+\
-		" secondary alignments in library "+pool_name)
+			
+	print("removed "+str(num_unpaired)+" unpaired, "+str(num_secondary)+\
+		" secondary alignments, and "+str(num_low_mapq+num_low_qual)+\
+		" low mapping quality reads, and "+str(num_low_snp_qual)+\
+		" reads with low quality at SNP positions in library "+pool_name)
 
 
 # Opens the aligned bam file and generates a dictionary
 #   with key (read1,read2) and value the int count of that read pair sequence
-def extract_haps(metadata,aligned_output_directory):
+def extract_haps(metadata,aligned_output_directory,snp_positions=None):
 	# Generate the aligned bam file name and access it with pysam
 	pool_name = metadata[8]
 	print('Extracting '+pool_name)
@@ -127,23 +181,22 @@ def extract_haps(metadata,aligned_output_directory):
 	# Collect counts for each unique read pair sequence
 	read_haps = {}
 	pair_count = 0
-	for read_1, read_2 in read_pair_generator_tally(bamfile,contig,amp_start,amp_end,pool_name):
+	for read_1, read_2 in read_pair_generator_tally(bamfile,contig,amp_start,amp_end,pool_name,snp_positions):
 		r1_seq = read_1.get_forward_sequence()
 		r2_seq = reverse_complement(read_2.get_forward_sequence())
 		read_haps[(r1_seq,r2_seq)] = read_haps.get((r1_seq,r2_seq),0) + 1
 		pair_count += 1
-		# print('recorded '+str(pair_count)+'th read pair')
 	bamfile.close()
 	print('counted '+str(pair_count)+' read pairs in pool '+pool_name)
 	return read_haps
 
 # Opens the aligned bam file and generates a dictionary
 #   with key (read1,read2) and value the int count of that read pair sequence
-def extract_read_hap_sets(read_metadata,aligned_output_directory):
+def extract_read_hap_sets(read_metadata,aligned_output_directory,snp_positions=None):
 	read_hap_sets = []
 	print('Extracting paired end read unique sequences and counts:')
 	for metadata in read_metadata:
-		read_haps = extract_haps(metadata,aligned_output_directory)
+		read_haps = extract_haps(metadata,aligned_output_directory,snp_positions)
 		read_hap_sets += [read_haps]
 	print('\n')
 	return read_hap_sets
@@ -367,9 +420,26 @@ def generate_amp_seq_from_pair(r1,r2,amp_start,amp_end):
 	return (combined_read,num_overlap_mismatched_bases)
 
 
+# For reading a tab-separated file with one fixed difference per line and a header line,
+#   of the form:  amplicon_offset \t genomic_position \t inv_ATGCN_count_list \t std_ATGCN_count_list
+def read_fixed_diff_file(file_name):
+	diffs = []
+	with open(file_name,'r') as seq_file:
+		lines = seq_file.readlines()
+		for line in lines[1:]:
+			data = [d.strip() for d in line.strip().split('\t')]
+			offset = int(data[0])
+			genom_pos = int(data[1])
+			inv_base_dist = [int(b.strip()) for b in data[2][1:-1].split(',')]
+			std_base_dist = [int(b.strip()) for b in data[3][1:-1].split(',')]
+			inv_bases = str(data[4])
+			std_bases = str(data[5])
+			diffs += [(offset, genom_pos, inv_base_dist, std_base_dist, inv_bases, std_bases)]
+	return diffs
+
 # Opens the aligned bam file and generates a dictionary
 #   with key (read1,read2) and value the int count of that read pair sequence
-def extract_combined_amp_seqs(metadata,aligned_output_directory):
+def extract_combined_amp_seqs(metadata,aligned_output_directory,amp_ref_dir):
 	# Generate the aligned bam file name and access it with pysam
 	pool_name = metadata[8]
 	print('Extracting '+pool_name)
@@ -383,12 +453,17 @@ def extract_combined_amp_seqs(metadata,aligned_output_directory):
 	contig = str(ref_chrom_dict[chrom])
 	region = str(contig)+':'+str(amp_start)+'-'+str(amp_end)
 
+	# Get the positions of the SNPs from the amplicon reference sequence file
+	amp_name = metadata[6]
+	amp_fixed_diff_file = amp_ref_dir+amp_name+'_fixdif.txt'
+	snp_positions = [diff[1] for diff in read_fixed_diff_file(amp_fixed_diff_file)]
+
 	# Collect counts for each unique combined read pair sequence
 	amp_haps = {}
 	pair_count = 0
 	num_overlap_mismatched_bases = 0
 	num_mismatched_overlaps = 0
-	for read_1, read_2 in read_pair_generator_tally(bamfile,contig,amp_start,amp_end,pool_name):
+	for read_1, read_2 in read_pair_generator_tally(bamfile,contig,amp_start,amp_end,pool_name,snp_positions):
 		(combined_amp, n_mis_b) = generate_amp_seq_from_pair(read_1,read_2,amp_start,amp_end)
 		if n_mis_b:
 			num_mismatched_overlaps += 1
@@ -525,9 +600,9 @@ def extract_and_write_async_pool_callbacks(read_metadata,aligned_output_director
 
 
 # Handles extraction and writing of unique read counts
-def extract_and_write(metadata,aligned_output_directory,out_dir):
+def extract_and_write(metadata,aligned_output_directory,out_dir,amp_ref_dir):
 	# Assemble the haplotype/unique read counts
-	read_amp_haps = extract_combined_amp_seqs(metadata,aligned_output_directory)
+	read_amp_haps = extract_combined_amp_seqs(metadata,aligned_output_directory,amp_ref_dir)
 
 	# Write the output to file
 	write_read_amp_hap_file_with_header(read_amp_haps,metadata,out_dir)
@@ -538,7 +613,7 @@ def extract_and_write(metadata,aligned_output_directory,out_dir):
 
 # For founding a multiprocessing pool to asynchronously extract and record unique read pair counts,
 #   and to return the unique read (haplotype) count data in correct order
-def extract_and_write_async_pool(read_metadata,aligned_output_directory,out_dir):
+def extract_and_write_async_pool(read_metadata,aligned_output_directory,out_dir,amp_ref_dir):
 	read_amp_hap_sets = []
 
 	# Prepare the multiprocessing pool, leave at least 2?
@@ -548,7 +623,7 @@ def extract_and_write_async_pool(read_metadata,aligned_output_directory,out_dir)
 	async_objects = []
 	print('Extracting paired end read unique sequences and counts, in asynchronous parallel:')
 	for metadata in read_metadata:
-		async_objects += [pool.apply_async(extract_and_write,args=(metadata,aligned_output_directory,out_dir))]
+		async_objects += [pool.apply_async(extract_and_write,args=(metadata,aligned_output_directory,out_dir,amp_ref_dir))]
 
 	# Wait for the results with .get()
 	read_amp_hap_sets = [result.get() for result in async_objects]
